@@ -130,7 +130,7 @@ def student_screen():
                         st.session_state.is_logged_in = True
                         st.session_state.user_role = 'student'
                         st.session_state.student_data = student
-                        st.toast(f'Welcome Back {student['name']}')
+                        st.toast(f"Welcome Back {student['name']}")
                         import time
                         time.sleep(1)
                         st.rerun()
@@ -172,7 +172,7 @@ def student_screen():
                                 st.session_state.is_logged_in = True
                                 st.session_state.login_type = 'student'
                                 st.session_state.student_data = response_data[0]
-                                st.toast(f'Profile Created! Hey {new_name}!')
+                                st.toast(f"Profile Created! Hey {new_name}!")
                                 import time                  
                                 time.sleep(1)
                                 st.rerun()
