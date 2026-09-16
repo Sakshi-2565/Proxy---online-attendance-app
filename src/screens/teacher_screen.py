@@ -112,7 +112,7 @@ def teacher_tab_take_attendance():
 
         for idx, img in enumerate(st.session_state.attendance_images):
             with gallery_cols[idx % 4]:
-                st.image(img,width='stretch',caption=f'Photo {idx+1}')
+                st.image(img,width='stretch',caption=f"Photo {idx+1}")
 
     has_photos = bool(st.session_state.attendance_images)
 
@@ -136,7 +136,7 @@ def teacher_tab_take_attendance():
                         for sid in detected.keys():
                             student_id = int(sid)
 
-                            all_detected_ids.setdefault(student_id,[]).append(f'Photo {idx+1}')
+                            all_detected_ids.setdefault(student_id,[]).append(f"Photo {idx+1}")
 
                 enrolled_res = supabase.table('subject_students').select("*,students(*)").eq('subject_id',selected_subject_id).execute()
                 enrolled_students = enrolled_res.data
